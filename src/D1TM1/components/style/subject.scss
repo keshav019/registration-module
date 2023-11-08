@@ -1,0 +1,22 @@
+.subject {
+    max-width: 685px;
+    min-height: 299px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    button {
+        width: 139px;
+        height: 45px;
+        border-radius: 45px;
+        border: 1px solid #D04E62;
+        margin: 2px;
+        background-color: #FFFFFF;
+        color: #D04E62;
+        cursor: pointer;
+    }
+
+    .selected {
+        background-color: #6764FF;
+        color: #FFFFFF;
+    }
+}
