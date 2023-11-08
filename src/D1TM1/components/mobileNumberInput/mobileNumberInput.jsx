@@ -1,7 +1,12 @@
 import React from 'react';
 import '../style/phoneNumberInput.scss';
 
-function PhoneNumberInput({ placeholder, description, required = false }) {
+function PhoneNumberInput({ placeholder, description, required = false, onChange }) {
+    const handleNumberChange = (e) => {
+        e.preventDefault();
+        onChange(e.target.value);
+    };
+
     return (
         <div className="phone-input">
             {description && (
@@ -12,11 +17,7 @@ function PhoneNumberInput({ placeholder, description, required = false }) {
             )}
             <div className="phone-container">
                 <span>+91</span>
-                <input
-                    type="number"
-                    required={required}
-                    placeholder="98765-43210"
-                />
+                <input type="number" required={required} placeholder="98765-43210" onChange={handleNumberChange} />
             </div>
         </div>
     );

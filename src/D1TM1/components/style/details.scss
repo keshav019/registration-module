@@ -34,7 +34,7 @@
         width: 70%;
         min-height: 100vh;
 
-        p {
+        .right-heading{
             padding: 20px;
             padding-right: 50px;
             text-align: right;
@@ -103,6 +103,7 @@
                 font-weight: 400;
                 line-height: 54px;
                 border-radius: 8px;
+                cursor: pointer;
             }
         }
 

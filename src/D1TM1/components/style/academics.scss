@@ -1,0 +1,32 @@
+.academics {
+    width: 709px;
+    margin: auto;
+    .heading {
+        color: #EC5F70;
+        font-family: Poppins;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: left;
+    }
+
+    h5 {
+        color: rgba(0, 0, 0, 0.40);
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+    }
+    form{
+        padding: 20px;
+        .row{
+            display: flex;
+            width: 100%;
+            gap: 20px;
+        }
+    }
+    
+}

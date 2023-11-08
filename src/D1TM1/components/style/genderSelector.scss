@@ -1,10 +1,10 @@
-.suject {
+.gender {
     width: 100%;
     justify-content: left;
     .options{
         margin-top: -20px;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
         width: 80%;
         margin-left: 18px;
     }

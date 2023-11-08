@@ -4,6 +4,9 @@ import logo from '../../images/logo.png'
 import vector from '../../images/Vector.png'
 import logout from '../../images/logout.png'
 import { useState } from 'react'
+import Personal from '../personal/personal'
+import Address from '../address/address'
+import Academics from '../academics/academics'
 function Details() {
     const [activeStep, setActiveStep] = useState(1);
     const handleNext = () => {
@@ -21,7 +24,7 @@ function Details() {
                 </button>
             </div>
             <div className='right'>
-                <p>Having Trouble? <span>Need Help!</span></p>
+                <p className='right-heading'>Having Trouble? <span>Need Help!</span></p>
                 <h3>We would love to know more about you. Please share some basic details</h3>
                 <div className="wrapper">
                     <ul>
@@ -35,7 +38,9 @@ function Details() {
                             <span>3</span> Academic Details
                         </li>
                     </ul>
-                    {activeStep < 3 && <button onClick={handleNext}>Next ></button>}
+                    {activeStep==1 && <Personal activeStep={activeStep} handleNext={handleNext} />}
+                    {activeStep==2 && <Address activeStep={activeStep} handleNext={handleNext} />}
+                    {activeStep==3 && <Academics activeStep={activeStep} handleNext={handleNext} />}
                 </div>
             </div>
         </div>

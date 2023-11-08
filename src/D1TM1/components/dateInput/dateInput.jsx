@@ -1,7 +1,12 @@
 import React from 'react';
 import '../style/dateSelect.scss';
 
-function DateInput({ description, required = false }) {
+function DateInput({ description, required = false, onChange }) {
+    const handleDateChange = (e) => {
+        e.preventDefault();
+        onChange(e.target.value);
+    };
+
     return (
         <div className="date-select">
             {description && (
@@ -11,11 +16,7 @@ function DateInput({ description, required = false }) {
                 </p>
             )}
             <div className="date-container">
-                <input
-                    type="date"
-                    required={required}
-                    placeholder="DD-MM-YYYY"
-                />
+                <input type="date" required={required} placeholder="DD-MM-YYYY" onChange={handleDateChange} />
             </div>
         </div>
     );
